@@ -8,6 +8,8 @@ const mongoose = require("mongoose");
 const userRoute = require("./routes/user.route");
 const authRoute = require("./routes/auth.route");
 const productRoute = require("./routes/product.route");
+const cartRoute = require("./routes/cart.route");
+const orderRoute = require("./routes/order.route");
 
 const dotenv = require("dotenv");
 
@@ -28,6 +30,8 @@ app.use(express.json()); // for parsing application/json - important to take jso
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/product", productRoute);
+app.use("/api/cart", cartRoute);
+app.use("/api/order", orderRoute);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server started on port 5000");
