@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 
 //Routes
 const userRoute = require("./routes/user.route");
+const authRoute = require("./routes/auth.route");
 
 const dotenv = require("dotenv");
 
@@ -20,7 +21,11 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }).then(
   }
 );
 
+app.use(express.json()); // for parsing application/json - important to take json input as object
+
+//Routes
 app.use("/api/user", userRoute);
+app.use("/api/auth", authRoute);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server started on port 5000");
