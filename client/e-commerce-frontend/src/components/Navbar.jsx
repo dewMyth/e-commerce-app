@@ -6,6 +6,7 @@ import { Badge } from "@material-ui/core";
 
 const Container = styled.div`
   height: 60px;
+  margin-bottom: 15px;
 `;
 
 const Wrapper = styled.div`
@@ -13,7 +14,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: -25px;
+  margin-top: -15px;
+  margin-left: 10px;
 `;
 
 const Left = styled.div`
@@ -70,7 +72,7 @@ const Navbar = () => {
           <Langugae>EN</Langugae>
           <SearchContainer>
             <Input />
-            <Search style={{ color: "gray", fontSize:16 }} />
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
