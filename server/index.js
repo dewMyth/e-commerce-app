@@ -32,7 +32,7 @@ app.use(cors());
 //Routes
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
-app.use("/api/product", productRoute);
+app.use("/api/products", productRoute);
 app.use("/api/cart", cartRoute);
 app.use("/api/order", orderRoute);
 app.use("/api/checkout", stripeRoute);

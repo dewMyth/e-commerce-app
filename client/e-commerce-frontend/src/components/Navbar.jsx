@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
@@ -7,6 +8,7 @@ import { Badge } from "@material-ui/core";
 const Container = styled.div`
   height: 60px;
   margin-bottom: 15px;
+  ${mobile({ height: "50px" })}
 `;
 
 const Wrapper = styled.div`
@@ -16,6 +18,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   margin-top: -15px;
   margin-left: 10px;
+  ${mobile({ padding: "10px 0px", height: "50px" })}
 `;
 
 const Left = styled.div`
@@ -27,6 +30,7 @@ const Left = styled.div`
 const Langugae = styled.span`
   font-size: 14px;
   cursor: pointer;
+  ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
@@ -39,6 +43,7 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  ${mobile({ width: "50px " })}
 `;
 
 const Center = styled.div`
